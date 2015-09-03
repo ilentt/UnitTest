@@ -1,14 +1,15 @@
 package ilentt.ilenlab.com.unit.test;
 
-import junit.framework.TestCase;
+import org.junit.Test;
 
-public class QuadraticEquationIITest extends TestCase {
+public class QuadraticEquationIITest {
 
 	/*
 	public void testMain() {
 		QuadraticEquationII.main(new String [] {});
 	}
 	*/
+	@Test
 	public void testRunQuadraticEquationII() {
 		QuadraticEquationII q = new QuadraticEquationII();
 		
