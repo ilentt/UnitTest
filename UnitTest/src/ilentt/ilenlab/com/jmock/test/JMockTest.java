@@ -9,16 +9,18 @@ import org.junit.Test;
 public class JMockTest {
 
 	@Test
-	public void test() {
+	public void testAdd() {
+		final int a=1;
+		final int b=2;
+		
 		Mockery mockery = new Mockery();
 		final Math math = mockery.mock(Math.class);
-		mockery.checking(new org.jmock.Expectations()
-		{{
-			oneOf(math).Add(1,2);
-			will(returnValue((3)));
+		mockery.checking(new org.jmock.Expectations() {{
+			oneOf(math).Add(a,b);
+			will(returnValue(a+b));
 		}});
 		
-		int i = math.Add(1, 2);
+		int i = math.Add(a, b);
 		System.out.println(i);
 		Assert.assertEquals(i, 3);
 	}
